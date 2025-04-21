@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online PDF tools - compress, convert, merge, split, edit PDFs and images. All tools work in your browser with no installation required.">
+    <meta name="keywords" content="PDF converter, compress PDF, merge PDF, split PDF, PDF to Word, JPG to PDF, edit PDF, OCR PDF, free PDF tools">
+    <title>PDF Toolkit Pro - All-in-One PDF and Image Conversion Tools</title>
+    <link rel="canonical" href="https://yourdomain.com" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary-color: #4285f4;
+            --secondary-color: #34a853;
+            --accent-color: #ea4335;
+            --light-gray: #f5f5f5;
+            --dark-gray: #333;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--accent-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .ad-banner {
+            background-color: var(--light-gray);
+            padding: 15px;
+            margin: 1rem auto;
+            text-align: center;
+            border-radius: 5px;
+            max-width: 970px;
+        }
+        
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem 0;
+        }
+        
+        .tool-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .tool-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .tool-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-gray);
+        }
+        
+        .tool-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .main-content {
+            padding: 2rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--dark-gray);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .upload-area {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            border: 2px dashed #ddd;
+            transition: border-color 0.3s;
+        }
+        
+        .upload-area:hover {
+            border-color: var(--primary-color);
+        }
+        
+        .upload-area i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .upload-area h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: #3367d6;
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #2d9249;
+        }
+        
+        .options {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .features {
+            background-color: var(--light-gray);
+            padding: 3rem 0;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        footer {
+            background-color: var(--dark-gray);
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            overflow: auto;
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #eee;
+            border-radius: 5px;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background-color: var(--primary-color);
+            width: 0%;
+            transition: width 0.3s;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+            }
+            
+            nav ul li {
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .tool-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .tool-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">PDF<span>Toolkit</span>Pro</a>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Your Complete PDF Solution</h1>
+            <p>Merge, split, compress, convert and edit PDF files with our free online tools. No installation required - works in your browser!</p>
+            <a href="#tools" class="btn btn-secondary">Explore Tools</a>
+        </div>
+    </section>
+    
+    <div class="container">
+        <div class="ad-banner">
+            <!-- AdSense Header Banner -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                 data-ad-slot="YOUR_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+    
+    <section id="tools" class="main-content">
+        <div class="container">
+            <div class="section-title">
+                <h2>All PDF Tools</h2>
+            </div>
+            
+            <div class="upload-area" id="mainUploadArea">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <h3>Drag & Drop Your Files Here</h3>
+                <p>Or click to browse your computer</p>
+                <input type="file" id="fileInput" style="display: none;" multiple>
+                <button class="btn" onclick="document.getElementById('fileInput').click()">Select Files</button>
+                <div class="options" id="fileOptions" style="display: none;">
+                    <button class="btn" id="processBtn">Process Files</button>
+                    <button class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                </div>
+                <div class="progress-bar" id="progressBar" style="display: none;">
+                    <div class="progress" id="progress"></div>
+                </div>
+            </div>
+            
+            <div class="tool-grid">
+                <!-- PDF Tools -->
+                <div class="tool-card" onclick="selectTool('merge-pdf')">
+                    <div class="tool-icon"><i class="fas fa-object-group"></i></div>
+                    <h3>Merge PDF</h3>
+                    <p>Combine multiple PDF files into one document</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('split-pdf')">
+                    <div class="tool-icon"><i class="fas fa-cut"></i></div>
+                    <h3>Split PDF</h3>
+                    <p>Extract pages or split PDF into multiple files</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('compress-pdf')">
+                    <div class="tool-icon"><i class="fas fa-compress-alt"></i></div>
+                    <h3>Compress PDF</h3>
+                    <p>Reduce PDF file size while preserving quality</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('pdf-to-word')">
+                    <div class="tool-icon"><i class="fas fa-file-word"></i></div>
+                    <h3>PDF to Word</h3>
+                    <p>Convert PDF to editable Word documents</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('pdf-to-powerpoint')">
+                    <div class="tool-icon"><i class="fas fa-file-powerpoint"></i></div>
+                    <h3>PDF to PowerPoint</h3>
+                    <p>Convert PDF to editable PowerPoint slides</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('pdf-to-excel')">
+                    <div class="tool-icon"><i class="fas fa-file-excel"></i></div>
+                    <h3>PDF to Excel</h3>
+                    <p>Convert PDF tables to editable Excel sheets</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('word-to-pdf')">
+                    <div class="tool-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h3>Word to PDF</h3>
+                    <p>Convert Word documents to PDF files</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('powerpoint-to-pdf')">
+                    <div class="tool-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h3>PowerPoint to PDF</h3>
+                    <p>Convert presentations to PDF documents</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('excel-to-pdf')">
+                    <div class="tool-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h3>Excel to PDF</h3>
+                    <p>Convert spreadsheets to PDF files</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('edit-pdf')">
+                    <div class="tool-icon"><i class="fas fa-edit"></i></div>
+                    <h3>Edit PDF</h3>
+                    <p>Modify text, images and pages in your PDF</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('pdf-to-jpg')">
+                    <div class="tool-icon"><i class="fas fa-file-image"></i></div>
+                    <h3>PDF to JPG</h3>
+                    <p>Convert PDF pages to high-quality JPG images</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('jpg-to-pdf')">
+                    <div class="tool-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h3>JPG to PDF</h3>
+                    <p>Convert images to PDF documents</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('sign-pdf')">
+                    <div class="tool-icon"><i class="fas fa-signature"></i></div>
+                    <h3>Sign PDF</h3>
+                    <p>Add digital signatures to PDF documents</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('watermark')">
+                    <div class="tool-icon"><i class="fas fa-stamp"></i></div>
+                    <h3>Watermark</h3>
+                    <p>Add text or image watermarks to PDFs</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('rotate-pdf')">
+                    <div class="tool-icon"><i class="fas fa-redo"></i></div>
+                    <h3>Rotate PDF</h3>
+                    <p>Rotate PDF pages to the correct orientation</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('html-to-pdf')">
+                    <div class="tool-icon"><i class="fab fa-html5"></i></div>
+                    <h3>HTML to PDF</h3>
+                    <p>Convert web pages to PDF documents</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('unlock-pdf')">
+                    <div class="tool-icon"><i class="fas fa-unlock"></i></div>
+                    <h3>Unlock PDF</h3>
+                    <p>Remove password protection from PDFs</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('protect-pdf')">
+                    <div class="tool-icon"><i class="fas fa-lock"></i></div>
+                    <h3>Protect PDF</h3>
+                    <p>Add password protection to PDF files</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('organize-pdf')">
+                    <div class="tool-icon"><i class="fas fa-sort-alpha-down"></i></div>
+                    <h3>Organize PDF</h3>
+                    <p>Rearrange, delete or insert PDF pages</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('repair-pdf')">
+                    <div class="tool-icon"><i class="fas fa-wrench"></i></div>
+                    <h3>Repair PDF</h3>
+                    <p>Fix corrupted or damaged PDF files</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('page-numbers')">
+                    <div class="tool-icon"><i class="fas fa-list-ol"></i></div>
+                    <h3>Page Numbers</h3>
+                    <p>Add page numbers to PDF documents</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('scan-to-pdf')">
+                    <div class="tool-icon"><i class="fas fa-scanner"></i></div>
+                    <h3>Scan to PDF</h3>
+                    <p>Create PDFs from scanned documents</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('ocr-pdf')">
+                    <div class="tool-icon"><i class="fas fa-eye"></i></div>
+                    <h3>OCR PDF</h3>
+                    <p>Convert scanned PDFs to searchable text</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('compare-pdf')">
+                    <div class="tool-icon"><i class="fas fa-code-branch"></i></div>
+                    <h3>Compare PDF</h3>
+                    <p>Find differences between two PDF files</p>
+                </div>
+                
+                <div class="tool-card" onclick="selectTool('redact-pdf')">
+                    <div class="tool-icon"><i class="fas fa-marker"></i></div>
+                    <h3>Redact PDF</h3>
+                    <p>Permanently remove sensitive information</p>
+                </div>
+            </div>
+            
+            <div class="ad-banner">
+                <!-- AdSense Middle Banner -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                     data-ad-slot="YOUR_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </section>
+    
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Our PDF Tools?</h2>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3><i class="fas fa-shield-alt"></i> Secure Processing</h3>
+                    <p>All files are processed in your browser. Your documents never leave your computer, ensuring complete privacy and security.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-bolt"></i> Fast Processing</h3>
+                    <p>Our tools use advanced algorithms to process your files quickly without compromising quality.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-mobile-alt"></i> Mobile Friendly</h3>
+                    <p>Works perfectly on all devices - smartphones, tablets, and desktop computers.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-euro-sign"></i> 100% Free</h3>
+                    <p>All our tools are completely free to use with no hidden charges or watermarks.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-file-import"></i> No Installation</h3>
+                    <p>Works directly in your web browser. No software installation required.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-cloud"></i> No Uploads</h3>
+                    <p>Your files stay on your computer. We don't upload them to any servers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container">
+        <div class="ad-banner">
+            <!-- AdSense Footer Banner -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                 data-ad-slot="YOUR_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>PDF Tools</h3>
+                    <ul>
+                        <li><a href="#">Merge PDF</a></li>
+                        <li><a href="#">Split PDF</a></li>
+                        <li><a href="#">Compress PDF</a></li>
+                        <li><a href="#">PDF to Word</a></li>
+                        <li><a href="#">PDF to PowerPoint</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Image Tools</h3>
+                    <ul>
+                        <li><a href="#">PDF to JPG</a></li>
+                        <li><a href="#">JPG to PDF</a></li>
+                        <li><a href="#">Compress Image</a></li>
+                        <li><a href="#">Resize Image</a></li>
+                        <li><a href="#">Convert Image</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Other Tools</h3>
+                    <ul>
+                        <li><a href="#">Edit PDF</a></li>
+                        <li><a href="#">Sign PDF</a></li>
+                        <li><a href="#">Protect PDF</a></li>
+                        <li><a href="#">OCR PDF</a></li>
+                        <li><a href="#">Watermark PDF</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 PDF Toolkit Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Processing Modal -->
+    <div id="processingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Processing Files</h2>
+            <div class="progress-bar">
+                <div class="progress" id="modalProgress"></div>
+            </div>
+            <p id="modalStatus">Preparing files for processing...</p>
+            <div id="downloadSection" style="display: none; margin-top: 1.5rem;">
+                <a href="#" class="btn" id="downloadBtn">Download Processed Files</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Current selected tool
+        let selectedTool = null;
+        let selectedFiles = [];
+        
+        // Tool selection function
+        function selectTool(tool) {
+            selectedTool = tool;
+            document.getElementById('fileInput').click();
+        }
+        
+        // File input change handler
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            selectedFiles = Array.from(e.target.files);
+            if (selectedFiles.length > 0) {
+                document.getElementById('fileOptions').style.display = 'flex';
+                
+                // Update upload area to show selected files
+                const uploadArea = document.getElementById('mainUploadArea');
+                uploadArea.querySelector('h3').textContent = `${selectedFiles.length} file(s) selected`;
+                uploadArea.querySelector('p').textContent = selectedFiles.map(f => f.name).join(', ');
+            }
+        });
+        
+        // Process button handler
+        document.getElementById('processBtn').addEventListener('click', function() {
+            if (selectedFiles.length === 0) return;
+            
+            // Show processing modal
+            const modal = document.getElementById('processingModal');
+            modal.style.display = 'block';
+            document.getElementById('modalTitle').textContent = `Processing ${selectedTool.replace('-', ' ')}...`;
+            
+            // Simulate processing (in a real app, this would be actual file processing)
+            simulateProcessing();
+        });
+        
+        // Cancel button handler
+        document.getElementById('cancelBtn').addEventListener('click', function() {
+            selectedFiles = [];
+            document.getElementById('fileInput').value = '';
+            document.getElementById('fileOptions').style.display = 'none';
+            
+            // Reset upload area
+            const uploadArea = document.getElementById('mainUploadArea');
+            uploadArea.querySelector('h3').textContent = 'Drag & Drop Your Files Here';
+            uploadArea.querySelector('p').textContent = 'Or click to browse your computer';
+        });
+        
+        // Close modal
+        function closeModal() {
+            document.getElementById('processingModal').style.display = 'none';
+        }
+        
+        // Simulate file processing (for demo purposes)
+        function simulateProcessing() {
+            const progressBar = document.getElementById('modalProgress');
+            const statusText = document.getElementById('modalStatus');
+            const downloadSection = document.getElementById('downloadSection');
+            
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += Math.random() * 10;
+                if (progress >= 100) {
+                    progress = 100;
+                    clearInterval(interval);
+                    
+                    statusText.textContent = 'Processing complete!';
+                    downloadSection.style.display = 'block';
+                    
+                    // Set up download button
+                    document.getElementById('downloadBtn').onclick = function() {
+                        alert('In a real implementation, this would download the processed files.');
+                        closeModal();
+                        return false;
+                    };
+                }
+                
+                progressBar.style.width = `${progress}%`;
+                statusText.textContent = `Processing... ${Math.round(progress)}%`;
+            }, 300);
+        }
+        
+        // Drag and drop functionality
+        const uploadArea = document.getElementById('mainUploadArea');
+        
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.style.borderColor = '#4285f4';
+        });
+        
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.style.borderColor = '#ddd';
+        });
+        
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.style.borderColor = '#ddd';
+            
+            if (e.dataTransfer.files.length > 0) {
+                selectedFiles = Array.from(e.dataTransfer.files);
+                document.getElementById('fileOptions').style.display = 'flex';
+                
+                // Update upload area to show selected files
+                uploadArea.querySelector('h3').textContent = `${selectedFiles.length} file(s) selected`;
+                uploadArea.querySelector('p').textContent = selectedFiles.map(f => f.name).join(', ');
+            }
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('processingModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+        
+        // Initialize AdSense (replace with your actual AdSense ID)
+        function initAdSense() {
+            // This would be handled by the AdSense script automatically
+            // Just ensure you've replaced YOUR_ADSENSE_ID in the script tag
+        }
+        
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initAdSense();
+        });
+    </script>
+</body>
+</html>
